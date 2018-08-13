@@ -6,5 +6,5 @@ export async function init() {
 
 export async function onPull({ args }) {
   const { issue } = args;
-  console.log("issue" +  issue);
+  console.log(issue.get());
 }
