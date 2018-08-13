@@ -5,7 +5,7 @@ export async function init() {
 }
 
 export async function onPull({ args }) {
-  const { pullRequest } = args;
-  const { id } = await pullRequest.$query({ id });
-  console.log(id);
+  const { diffUrl } = await args.pullRequest.$query({ diffUrl });
+  
+  console.log(diffUrl)
 }
