@@ -8,7 +8,7 @@ export async function onPull({ args }) {
   const { diff } = await args.pullRequest.$query('{ diff }');
 
   // TODO: path?
-  const hasFile = diff.includes('a/.travis.yml ');
+  const hasFile = diff.includes('a/.traviss.yml ');
   console.log(hasFile);
   if(hasFile){
    // await args.issue.subscribe();
