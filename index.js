@@ -1,5 +1,5 @@
-const { root } = program.refs
+const { root, repository } = program.refs
 
 export async function init() {
-  
+
 }
