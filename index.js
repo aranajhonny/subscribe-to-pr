@@ -6,10 +6,11 @@ export async function init() {
 
 export async function onPull({ args }) {  
   const { diff } = await args.pullRequest.$query('{ diff }');
-
-  // TODO: path?
+  
+  // hard-coding
   const hasFile = diff.includes('a/.travis.yml ');
-
+  
+  // fix function()
   if(hasFile){
     await args.issue.subscribe();
   }
