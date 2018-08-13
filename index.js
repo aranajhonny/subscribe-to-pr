@@ -5,7 +5,7 @@ export async function init() {
 }
 
 export async function onPull({ args }) {
-  const { diffUrl } = await args.pullRequest.query({ diffUrl });
+  const { diffUrl } = await args.pullRequest.$query({ diffUrl });
   
   // fetch git diff
   // TODO: axios call
