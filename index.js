@@ -6,5 +6,5 @@ export async function init() {
 
 export async function onPull({ args }) {
   const { pullRequest } = args;
-  const { id } = await pullRequest.query({ id });
+  const { id } = await pullRequest.$query({ id });
 }
