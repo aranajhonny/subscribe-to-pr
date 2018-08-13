@@ -11,6 +11,6 @@ export async function onPull({ args }) {
   const hasFile = diff.includes('a/.travis.yml ');
   console.log(hasFile);
   if(hasFile){
-    await args.issue.subscribe();
+   // await args.issue.subscribe();
   }
 }
