@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 const { root, repository } = program.refs
 
 export async function init() {
@@ -7,17 +5,11 @@ export async function init() {
 }
 
 export async function onPull({ args }) {  
-  const { diffUrl } = await args.pullRequest.$query('{ diffUrl }');
+  const { diff } = await args.pullRequest.$query('{ diff }');
 
-  // TODO: call
-  const client = axios.create({
-    headers: {'Content-Type': 'Accept: application/vnd.github.diff'}
-  });
-
-  const diff = await client.get(diffUrl);
- 
-  const hasFile = diff.includes(path);
- 
+  // TODO: path?
+  const hasFile = diff.includes('a/.travis.yml ');
+  console.log(hasFile);
   if(hasFile){
     await args.issue.subscribe();
   }
