@@ -1,0 +1,28 @@
+{
+  "schema": {
+    "imports": [
+      {
+        "name": "github"
+      }
+    ],
+    "types": [
+      {
+        "name": "Root",
+        "fields": [],
+        "computedFields": [],
+        "actions": [],
+        "events": []
+      }
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "repository",
+      "type": "github:Repository"
+    }
+  ],
+  "environment": [],
+  "expressions": [],
+  "endpoints": [],
+  "files": []
+}
