@@ -1,6 +1,6 @@
 {
   "name": "subscribetopr",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "dependencies": {
     "axios": "^0.18.0"
   },
