@@ -5,7 +5,9 @@ export async function init() {
 }
 
 export async function onPull({ args }) {
-  const { id } = await args.pullRequest.$query({ id });
-  
-  console.log(id)
+  const { diffUrl } = await args.pullRequest.$query({ diffUrl });
+  // fetch git diff
+
+  // if diff is true
+  // await args.issue.subscribe();
 }
