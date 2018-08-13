@@ -7,8 +7,9 @@ export async function init() {
 }
 
 export async function onPull({ args }) {  
-  const { diffUrl } = await args.pullRequest.$query({ diffUrl });
-/* 
+  const { diffUrl } = await args.pullRequest.$query('{ diffUrl }');
+
+  // TODO: call
   const client = axios.create({
     headers: {'Content-Type': 'Accept: application/vnd.github.diff'}
   });
@@ -19,5 +20,5 @@ export async function onPull({ args }) {
  
   if(hasFile){
     await args.issue.subscribe();
-  } */
+  }
 }
